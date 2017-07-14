@@ -18,7 +18,7 @@ public class Character_Base : MonoBehaviour {
 
     #region Unity
     new public Rigidbody2D rigidbody;
-
+/*
     private void Update() { // testing purposes
         Vector2 dest = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         if (dest!=Vector2.zero)
@@ -29,7 +29,7 @@ public class Character_Base : MonoBehaviour {
             Move = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
-
+*/
     IEnumerator moveCoroutine;
     bool moveCoroutineRunning = false;
     public Vector2 Move {
