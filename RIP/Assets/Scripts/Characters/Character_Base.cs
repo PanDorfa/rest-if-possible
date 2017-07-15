@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 
+[RequireComponent(typeof(Inventory), typeof(Rigidbody2D))]
 public class Character_Base : MonoBehaviour {
     public Inventory inventory;
 
@@ -53,8 +54,8 @@ public class Character_Base : MonoBehaviour {
     #endregion
 
     private void Awake() {
-        if (inventory == null)
-            inventory = gameObject.AddComponent<Inventory>();
+        inventory = GetComponent<Inventory>();
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
 }
